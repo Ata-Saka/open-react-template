@@ -1,6 +1,6 @@
 # Free React / Next.js landing page template
 
-![Open React / Next.js template preview](https://github.com/user-attachments/assets/522a5e46-2a0e-48ca-80eb-87c7fa58f3ea)
+![Open React / Next.js template preview]
 
 **Open** is a **free React / Next.js landing page template built with Tailwind CSS** for developers/makers who want to create a quick and professional landing page for their open source projects, SaaS products, online services, and more.
 
