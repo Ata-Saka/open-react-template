@@ -1,40 +1,24 @@
 "use client";
 
+
 import { useState } from "react";
 import useMasonry from "@/utils/useMasonry";
 import Image, { StaticImageData } from "next/image";
-import TestimonialImg01 from "@/public/images/testimonial-01.jpg";
-import TestimonialImg02 from "@/public/images/testimonial-02.jpg";
-import TestimonialImg03 from "@/public/images/testimonial-03.jpg";
-import TestimonialImg04 from "@/public/images/testimonial-04.jpg";
-import TestimonialImg05 from "@/public/images/testimonial-05.jpg";
-import TestimonialImg06 from "@/public/images/testimonial-06.jpg";
-import TestimonialImg07 from "@/public/images/testimonial-07.jpg";
-import TestimonialImg08 from "@/public/images/testimonial-08.jpg";
-import TestimonialImg09 from "@/public/images/testimonial-09.jpg";
-import ClientImg01 from "@/public/images/client-logo-01.svg";
-import ClientImg02 from "@/public/images/client-logo-02.svg";
-import ClientImg03 from "@/public/images/client-logo-03.svg";
-import ClientImg04 from "@/public/images/client-logo-04.svg";
-import ClientImg05 from "@/public/images/client-logo-05.svg";
-import ClientImg06 from "@/public/images/client-logo-06.svg";
-import ClientImg07 from "@/public/images/client-logo-07.svg";
-import ClientImg08 from "@/public/images/client-logo-08.svg";
-import ClientImg09 from "@/public/images/client-logo-09.svg";
+
+
+
 
 const testimonials = [
   {
-    img: TestimonialImg01,
-    clientImg: ClientImg01,
+    
     name: "MaKayla P.",
     company: "Disney",
     content:
-      "As a content creator, I was always on the lookout for a tool that could help me keep up with the demand. The AI-driven content tool has been a game-changer. It generates high-quality content in a fraction of the time it used to take me.",
+      "As a content PRODUCER, I was always on the lookout for a tool that could help me keep up with the demand. The AI-driven content tool has been a game-changer. It generates high-quality content in a fraction of the time it used to take me.",
     categories: [1, 3, 5],
   },
   {
-    img: TestimonialImg02,
-    clientImg: ClientImg02,
+    
     name: "Andrew K.",
     company: "Samsung",
     content:
@@ -42,8 +26,7 @@ const testimonials = [
     categories: [1, 2, 4],
   },
   {
-    img: TestimonialImg03,
-    clientImg: ClientImg03,
+    
     name: "Lucy D.",
     company: "Rio",
     content:
@@ -51,8 +34,7 @@ const testimonials = [
     categories: [1, 2, 5],
   },
   {
-    img: TestimonialImg04,
-    clientImg: ClientImg04,
+    
     name: "Pavel M.",
     company: "Canon",
     content:
@@ -60,8 +42,7 @@ const testimonials = [
     categories: [1, 4],
   },
   {
-    img: TestimonialImg05,
-    clientImg: ClientImg05,
+    
     name: "Miriam E.",
     company: "Cadbury",
     content:
@@ -69,8 +50,7 @@ const testimonials = [
     categories: [1, 3, 5],
   },
   {
-    img: TestimonialImg06,
-    clientImg: ClientImg06,
+    
     name: "Eloise V.",
     company: "Maffell",
     content:
@@ -78,8 +58,6 @@ const testimonials = [
     categories: [1, 3],
   },
   {
-    img: TestimonialImg07,
-    clientImg: ClientImg07,
     name: "Pierre-Gilles L.",
     company: "Binance",
     content:
@@ -87,8 +65,7 @@ const testimonials = [
     categories: [1, 2, 5],
   },
   {
-    img: TestimonialImg08,
-    clientImg: ClientImg08,
+
     name: "Danielle K.",
     company: "Forbes Inc.",
     content:
@@ -96,8 +73,7 @@ const testimonials = [
     categories: [1, 4],
   },
   {
-    img: TestimonialImg09,
-    clientImg: ClientImg09,
+    
     name: "Mary P.",
     company: "Ray Ban",
     content:
@@ -218,9 +194,7 @@ export default function Testimonials() {
           >
             {testimonials.map((testimonial, index) => (
               <div key={index} className="group">
-                <Testimonial testimonial={testimonial} category={category}>
-                  {testimonial.content}
-                </Testimonial>
+                
               </div>
             ))}
           </div>
@@ -280,3 +254,4 @@ export function Testimonial({
     </article>
   );
 }
+

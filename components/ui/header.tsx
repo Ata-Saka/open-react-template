@@ -1,16 +1,20 @@
 "use client";
-
 import Link from "next/link";
 import Logo from "./logo";
 
 export default function Header() {
   return (
-    <header className="z-30 mt-2 w-full md:mt-5">
+    <header className="fixed top-2 left-0 right-0 z-50 w-full md:top-3">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="relative flex h-14 items-center justify-between gap-3 rounded-2xl bg-gray-900/90 px-3 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,var(--color-gray-800),var(--color-gray-700),var(--color-gray-800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] after:absolute after:inset-0 after:-z-10 after:backdrop-blur-xs">
+        {/* Removed all transparent backgrounds and blur effects */}
+        <div className="relative flex h-14 items-center justify-between gap-3 rounded-2xl bg-gray-900 px-3 border border-gray-700">
+          
           {/* Site branding */}
-          <div className="flex flex-1 items-center">
+          <div className="flex flex-1 items-center gap-2">
             <Logo />
+            <span className="text-white text-lg font-semibold tracking-widest">
+              VISIBLY
+            </span>
           </div>
 
           {/* Desktop sign in links */}
@@ -18,7 +22,7 @@ export default function Header() {
             <li>
               <Link
                 href="/signin"
-                className="btn-sm relative bg-linear-to-b from-gray-800 to-gray-800/60 bg-[length:100%_100%] bg-[bottom] py-[5px] text-gray-300 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,var(--color-gray-800),var(--color-gray-700),var(--color-gray-800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-[length:100%_150%]"
+                className="btn-sm py-[5px] text-gray-300 bg-gray-800 hover:bg-gray-700 rounded-lg px-4 transition-colors"
               >
                 Sign In
               </Link>
@@ -26,12 +30,13 @@ export default function Header() {
             <li>
               <Link
                 href="/signup"
-                className="btn-sm bg-linear-to-t from-indigo-600 to-indigo-500 bg-[length:100%_100%] bg-[bottom] py-[5px] text-white shadow-[inset_0px_1px_0px_0px_--theme(--color-white/.16)] hover:bg-[length:100%_150%]"
+                className="btn-sm py-[5px] text-white bg-indigo-600 hover:bg-indigo-500 rounded-lg px-4 transition-colors"
               >
                 Register
               </Link>
             </li>
           </ul>
+
         </div>
       </div>
     </header>
