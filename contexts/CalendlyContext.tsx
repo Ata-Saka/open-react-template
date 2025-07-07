@@ -72,9 +72,9 @@ export function CalendlyProvider({ children }: { children: ReactNode }) {
         
         // Apply styling fixes after popup creation
         setTimeout(() => {
-          const calendlyOverlay = document.querySelector('.calendly-overlay');
-          const calendlyPopup = document.querySelector('.calendly-popup');
-          const calendlyContent = document.querySelector('.calendly-popup-content');
+          const calendlyOverlay = document.querySelector('.calendly-overlay') as HTMLElement;
+          const calendlyPopup = document.querySelector('.calendly-popup') as HTMLElement;
+          const calendlyContent = document.querySelector('.calendly-popup-content') as HTMLElement;
           
           if (calendlyOverlay) {
             calendlyOverlay.style.setProperty('z-index', '99999', 'important');
