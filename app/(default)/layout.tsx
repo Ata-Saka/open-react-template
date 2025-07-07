@@ -1,10 +1,8 @@
 "use client";
 
 import { useEffect } from "react";
-
 import AOS from "aos";
 import "aos/dist/aos.css";
-
 import Footer from "@/components/ui/footer";
 
 export default function DefaultLayout({
@@ -19,12 +17,13 @@ export default function DefaultLayout({
       duration: 600,
       easing: "ease-out-sine",
     });
-  });
+  }, []);
 
   return (
     <>
-      <main className="pt-28 md:pt-32">{children}</main>
-
+      <main className="pt-28 md:pt-32 relative z-10">
+        {children}
+      </main>
       <Footer />
     </>
   );
