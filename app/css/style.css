@@ -37,6 +37,19 @@
   overflow: auto !important;
 }
 
+/* Ensure close button is visible */
+.calendly-popup-close,
+.calendly-close-overlay {
+  z-index: 99999 !important;
+  display: block !important;
+  visibility: visible !important;
+  position: absolute !important;
+  top: 15px !important;
+  right: 15px !important;
+  cursor: pointer !important;
+  opacity: 1 !important;
+}
+
 @plugin "@tailwindcss/forms" {
   strategy: base;
 }

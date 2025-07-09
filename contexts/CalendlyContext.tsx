@@ -101,6 +101,53 @@ export function CalendlyProvider({ children }: { children: ReactNode }) {
             calendlyPopup.style.setProperty('left', '50%', 'important');
             calendlyPopup.style.setProperty('transform', 'translate(-50%, -50%)', 'important');
             calendlyPopup.style.setProperty('z-index', '99999', 'important');
+            
+            // Add custom close button
+            const closeButton = document.createElement('button');
+            closeButton.innerHTML = '×';
+            closeButton.style.cssText = `
+              position: fixed !important;
+              top: calc(5vh + 15px) !important;
+              left: calc(5vw + 15px) !important;
+              width: 35px !important;
+              height: 35px !important;
+              background: rgba(255, 255, 255, 0.95) !important;
+              border: none !important;
+              border-radius: 50% !important;
+              font-size: 22px !important;
+              font-weight: bold !important;
+              color: #333 !important;
+              cursor: pointer !important;
+              z-index: 100001 !important;
+              display: flex !important;
+              align-items: center !important;
+              justify-content: center !important;
+              box-shadow: 0 3px 15px rgba(0,0,0,0.4) !important;
+              transition: all 0.2s ease !important;
+              touch-action: manipulation !important;
+              -webkit-tap-highlight-color: transparent !important;
+            `;
+            
+            closeButton.addEventListener('click', () => {
+              window.location.reload();
+            });
+            
+            closeButton.addEventListener('mouseenter', () => {
+              closeButton.style.background = 'rgba(255, 255, 255, 1)';
+              closeButton.style.transform = 'scale(1.1)';
+            });
+            
+            closeButton.addEventListener('mouseleave', () => {
+              closeButton.style.background = 'rgba(255, 255, 255, 0.9)';
+              closeButton.style.transform = 'scale(1)';
+            });
+            
+            // Try to append to popup content instead of popup container
+            if (calendlyContent) {
+              calendlyContent.appendChild(closeButton);
+            } else {
+              calendlyPopup.appendChild(closeButton);
+            }
           }
           
           if (calendlyContent) {
